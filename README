@@ -1,0 +1,47 @@
+# PipeWire + Ardour + BrowserSink + Firefox ループバック再現
+
+Ubuntu 24.04 で **ブラウザ（Firefox）の音を Ardour に安定して取り込む方法** をまとめたリポジトリです。  
+Windows の UR22C 専用アプリ **dspMixFx UR-C** の「ループバック」機能を、Linux で PipeWire を使って再現しています。
+
+---
+
+## 概要
+
+- PipeWire を使ったループバックの構築手順  
+- 仮想スピーカー（BrowserSink）の作成と常駐化  
+- Firefox → Ardour へのルーティング例  
+- 遭遇したトラブルとその解決策  
+
+「コマンドや設定ファイルをコピーして再現したい」という方は [docs/SETUP_JA.md](docs/SETUP_JA.md) を参照してください。
+
+---
+
+## 環境
+
+- Ubuntu 24.04 LTS  
+- PipeWire 1.0.5  
+- Ardour 8.x  
+- オーディオインターフェイス: Steinberg UR22C  
+- 確認ツール: qpwgraph / pavucontrol  
+
+---
+
+## ルーティング図（最終形）
+
+写真
+
+---
+
+## トラブルシュート
+
+- JACK と PipeWire の共存問題  
+- Ardour 入力が毎回リセットされる  
+- pipewire-pulse サービスの起動失敗  
+- Firefox のクラッシュ  
+
+詳細は [docs/SETUP_JA.md](docs/SETUP_JA.md) に記載しています。
+
+---
+
+## ライセンス
+MIT License — 本リポジトリの内容は自由に利用・改変できますが、利用は自己責任でお願いします。
